@@ -24,8 +24,8 @@ mongoose.connect(MONGO_URI, {
 app.get('/', (req, res) => {
     res.send('Hello, world!');
 });
-
-app.use('/auth' , authRoutes);
+//app.use('/auth' , authRoutes);
+app.use('/' , authRoutes);
 
 app.use('/leaderboard', leaderboardRoutes);
 

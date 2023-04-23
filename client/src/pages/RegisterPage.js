@@ -33,7 +33,7 @@ function RegisterPage() {
     }
 
      try{
-      await axios.post(`${BASE_URL}/auth/register`, {
+      await axios.post(`${BASE_URL}/register`, {
         username,
         password
       })

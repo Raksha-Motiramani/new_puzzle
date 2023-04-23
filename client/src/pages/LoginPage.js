@@ -21,7 +21,7 @@ function LoginPage() {
     }
 
     try {
-      const response = await axios.post(`${BASE_URL}/auth/login`, {
+      const response = await axios.post(`${BASE_URL}/login`, {
         username,
         password,
       });
