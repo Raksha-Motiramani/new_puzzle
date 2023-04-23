@@ -1,1 +1,1 @@
-export const BASE_URL = "https://puzzel-task-raksha-backend.onrender.com/"
+export const BASE_URL = "https://puzzel-task-raksha-backend.onrender.com"
