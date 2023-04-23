@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import {BASE_URL} from '../services/helper'
 //import { useHistory } from "react-router-dom";
 
 function LoginPage() {
@@ -20,7 +21,7 @@ function LoginPage() {
     }
 
     try {
-      const response = await axios.post("https://puzzel-task-raksha-backend.onrender.com/auth/login", {
+      const response = await axios.post(`${BASE_URL}/auth/login`, {
         username,
         password,
       });

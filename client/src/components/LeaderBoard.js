@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation , useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../services/helper';
 
 function Leaderboard() {
   const location = useLocation();
@@ -9,7 +10,7 @@ function Leaderboard() {
 
   // Fetch leaderboard data from backend and update leaderboard state
   const updateLeaderboard = async () => {
-    const response = await fetch('https://puzzel-task-raksha-backend.onrender.com/leaderboard');
+    const response = await fetch(`${BASE_URL}/leaderboard`);
     const data = await response.json();
     setLeaderboard(data);
   };
@@ -23,7 +24,7 @@ function Leaderboard() {
     if (score !== null) {
       const submitScore = async () => {
         try {
-          const response = await fetch('https://puzzel-task-raksha-backend.onrender.com/leaderboard', {
+          const response = await fetch(`${BASE_URL}/leaderboard`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

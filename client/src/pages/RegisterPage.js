@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios"
 import { useNavigate , Link } from "react-router-dom";
+import { BASE_URL } from "../services/helper";
 
 function RegisterPage() {
    const navigate = useNavigate();
@@ -32,7 +33,7 @@ function RegisterPage() {
     }
 
      try{
-      await axios.post("https://puzzel-task-raksha-backend.onrender.com/auth/register", {
+      await axios.post(`${BASE_URL}/auth/register`, {
         username,
         password
       })
